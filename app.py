@@ -34,9 +34,9 @@ def main():
         # st.write(img_info)
         model = train_model(image1)
         prediction = detect_object(image2,model)
-        check_product_presence(prediction)
+        
         st.write("**Predictions:**")
-        st.write(prediction)    
+        st.write(check_product_presence(prediction))    
 
 def train_model(image):
     # Initialize the bounding boxes for your product in the original image.
